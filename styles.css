@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  /*As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border.*/
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /*Difine familia de fonte no corpo da página.*/
+}
+
+/*Estilo do cabeçalho*/
+header {
+  background-color: #4b31da;
+  /*cor de fundo do cabeçalho*/
+  padding: 15px;
+  /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+  text-align: center;
+  /*alinhamento do cabeçalho*/
+  font-size: 35px;
+  /*tamanho de fonte no cabeçalho*/
+  color: #0a0a0a;
+  /*cor de fonte no cabeçalho*/
+}
+
+/*Estilo do menu de navegação*/
+nav {
+  float: left;
+  /*Um elemento flutuante é um tipo de elemento cujo valor de float é diferente de none.*/
+  width: 15%;
+  /*definição de largura*/
+  height: 300px; 
+  /*definição de altura*/
+  background: #ccc;
+  /*cor de fundo*/
+  padding: 20px;
+  /*define uma distância entre o conteúdo de um elemento e suas bordas.*/
+}
+
+/*estilização de coluna ul*/
+nav ul {
+  list-style-type: none;
+  /*define o tipo de marcador das li dentro da ul*/
+  padding: 0;
+  /*define uma distância entre o conteúdo de um elemento e suas bordas.*/
+}
+
+/*estilização do article*/
+article {
+  float: left;
+  /*Um elemento flutuante é um tipo de elemento cujo valor de float é diferente de none.*/
+  padding: 20px;
+  /*define uma distância entre o conteúdo de um elemento e suas bordas.*/
+  width: 70%;
+  /*definição de largura*/
+  background-color: #f1f1f1;
+  /*cor de fundo*/
+  height: 300px; 
+  /*define a altura*/
+}
+
+/*estilização da div de publicidade*/
+.publi {
+    float: left;
+    /*Um elemento flutuante é um tipo de elemento cujo valor de float é diferente de none.*/
+    padding: 20px;
+    /*define uma distância entre o conteúdo de um elemento e suas bordas.*/
+    width: 15%;
+    /*definição de largura*/
+    background-color: #b4b2b2;
+    /*cor de fundo*/
+    height: 300px; 
+    /*define a altura*/
+}
+
+/* Limpar os flutuadores após as colunas */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  /*alinhar texto ao centro*/
+  color: white;
+}
+
+/* Layout responsivo - faz com que as colunas / div sejam adaptáveis a telas menores */
+@media (max-width: 600px) {
+  nav, article, .publi {
+    width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    position:relative;
+    top:4px;
+    list-style-type:none
+  }
+
+  nav li {
+    padding:0 24px;
+    float:left;
+    font-size:14px;
+    font-weight:700 
+  }
+}
+
+
+
